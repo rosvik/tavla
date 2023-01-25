@@ -25,7 +25,11 @@ const DashboardHeader: React.FC<Props> = ({ className }) => {
                         {settings.logo ? (
                             <img
                                 src={settings.logo}
-                                height={settings.logoSize}
+                                className={
+                                    showBoardDescription
+                                        ? classes.Logo
+                                        : classes.LargeLogo
+                                }
                             />
                         ) : (
                             <TavlaLogo

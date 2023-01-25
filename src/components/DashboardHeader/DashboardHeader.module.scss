@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
     padding: 2rem 0;
     overflow: hidden;
 }
@@ -16,5 +15,11 @@
 }
 
 .Logo {
+    display: block;
     height: 2rem;
+}
+
+.LargeLogo {
+    display: block;
+    height: 4rem;
 }
