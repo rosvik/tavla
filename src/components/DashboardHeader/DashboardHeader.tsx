@@ -16,24 +16,31 @@ const DashboardHeader: React.FC<Props> = ({ className }) => {
     const [settings] = useSettings()
 
     const showBoardDescription = !isMobileWeb() && settings.logoSize === '32px'
+    const showSmallLogo = !settings.logo || showBoardDescription
 
     return (
         <Contrast>
-            <div className={classNames(classes.DashboardHeader, className)}>
+            <div
+                className={classNames(
+                    classes.DashboardHeader,
+                    showSmallLogo ? classes.AlignBaseLine : undefined,
+                    className,
+                )}
+            >
                 <div>
                     <Link to="/">
                         {settings.logo ? (
                             <img
                                 src={settings.logo}
                                 className={
-                                    showBoardDescription
-                                        ? classes.Logo
+                                    showSmallLogo
+                                        ? classes.SmallLogo
                                         : classes.LargeLogo
                                 }
                             />
                         ) : (
                             <TavlaLogo
-                                className={classes.Logo}
+                                className={classes.SmallLogo}
                                 theme={settings.theme}
                             />
                         )}

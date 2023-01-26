@@ -6,6 +6,10 @@
     overflow: hidden;
 }
 
+.AlignBaseLine {
+    align-items: baseline;
+}
+
 .LogoDescription {
     margin-bottom: 0;
     margin-top: 0.75rem;
@@ -14,12 +18,10 @@
     display: block;
 }
 
-.Logo {
-    display: block;
+.SmallLogo {
     height: 2rem;
 }
 
 .LargeLogo {
-    display: block;
     height: 4rem;
 }
